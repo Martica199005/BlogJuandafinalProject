@@ -1,0 +1,28 @@
+{% extends 'base_layout.html' %}
+{% load bootstrap4 %}
+
+{% block content %}
+  <body>
+      <div class="container pb-1 pt-1 pb-md-5 pt-md-5">
+        <div class="row text-center">
+          <div class="col-12">
+            <h1 >Articulos sobre entrenamiento</h1>
+          </div>
+        </div>
+        <div class="row text-justify">
+          <div class="col-12">
+            <div class="articles">
+                {% for article in articles %}
+                    <div class="article">
+                      <h2><a href="{% url 'articles:detail' slug=article.slug %}">{{article.title}}</a></h2>
+                      <p>{{article.snippets}}</p>
+                      <p>{{article.date}}</p>
+                      <p class="author">agregado por {{article.author.username}}</p>
+                    </div>
+                {% endfor %}
+          </div>
+          </div>
+        </div>
+      </div>
+  </body>
+{% endblock %}

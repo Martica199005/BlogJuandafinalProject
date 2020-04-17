@@ -1,0 +1,102 @@
+
+
+#topHeader{
+  background-color: ghostwhite;
+  border: 1px solid silver;
+}
+
+#topheader a{
+  color: black;
+  font-size: 0.89rem;
+  font-weight:600;
+}
+
+.container-fluid{
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+nav ul li a{
+  font-size: 1.1rem;
+  font-weight:600;
+}
+
+
+.full-footer{
+  background-color: #34495e;
+
+}
+
+.top-footer p{
+color: white;
+
+}
+
+.top-footer h3{
+color: white;
+
+}
+
+.top-footer a{
+color: white;
+font-weight:600;
+}
+
+.bottom-footer{
+  background-color:rgb(6, 32, 82);
+}
+
+.bottom-footer p{
+ color: white;
+}
+
+.article-detail .article{
+    padding: 0;
+}
+
+.wrapper h1{
+font-weight:600;
+  
+}
+
+.site-form {
+    margin-top: 60px;
+    padding: 20px;
+    border: 1px solid #34495e;
+}
+
+
+/*site-form button {
+ background-color: #4CAF50; 
+  border: none;
+  color: white;
+}*/
+
+.aboutme{
+ background-color:#2980b9;
+ color: white;
+}
+
+
+
+.aboutme h3{
+font-weight:600;
+
+}
+/* LOGO .namelogo{
+  font-size: 2rem;
+  border: 1px solid #2980e;
+  background-color: #2980;
+  font-weight: 600;
+}*/
+h2.namelogo {
+  font-size: 2rem;
+  border: 1px solid #2980b9;
+  background-color:#2980b9;
+  font-family: cursive;
+  font-weight: 600;
+  transform: skewY(-5deg);
+  -ms-transform: skewY(-5deg);
+  -wbkit-transform: skewY(-5deg);
+}
+

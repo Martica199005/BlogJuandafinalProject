@@ -144,7 +144,7 @@ X_FRAME_OPTIONS = '*'
 
 STATICSTORAGE = "Whitenoise.storage.CompressedManifestStaticFilesStorage"
 
-django_heroku.setting(locals())
+django_heroku.settings(locals())
 
 
 

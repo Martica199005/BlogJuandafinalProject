@@ -39,7 +39,7 @@ def delete_article(request,slug):
   Articles.objects.get(slug=slug).delete()
   return redirect('articles:list')
 
-def article_subject(request):
+def article_workout(request):
   articles= Articles.objects.all().order_by('date')
   subject="workout"
   articles= articles.filter(subject__icontains=subject)

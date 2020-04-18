@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 
 
 import os
+import django_heroku
 
 
 
@@ -143,6 +144,7 @@ X_FRAME_OPTIONS = '*'
 
 STATICSTORAGE = "Whitenoise.storage.CompressedManifestStaticFilesStorage"
 
+django_heroku.setting(locals())
 
 
 

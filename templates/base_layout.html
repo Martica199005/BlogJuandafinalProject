@@ -45,21 +45,12 @@
                   <li class="nav-item"><a class="nav-link" href="{% url 'articles:articles_nutrition' %}" class="highlight" >Nutrición</a></li>
                   <li class="nav-item"><a class="nav-link" href="{% url 'articles:articles_massages' %}" class="highlight" >Masajes</a></li>
                   <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+                    <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Mis Servicios</a>
                     <div class="dropdown-menu" aria-labelledby="dropdown01">
-                    <a class="dropdown-item" href="#">Action</a>
-                    <a class="dropdown-item" href="#">Another action</a>
-                    <a class="dropdown-item" href="#">Something else here</a>
-                  </div>
-                </li>
-                  <li class class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" href="#">Mis Servicios</a>
-                    <div class="dropdown-menu ">
                       <a class="dropdown-item" href="{% url "articles:coaching" %}" class="dropdown-item">Coaching</a>
                       <a class="dropdown-item" href="{% url "articles:massages" %}" class="dropdown-item">Masajes</a>
-                      </div>
-                    </div>
-                  </li>
+                  </div>
+                </li>
                   {% if user.is_authenticated%}
                   <li class="nav-item">
                   <form class="logout link "action="{% url 'accounts:logout'%}" method="post">

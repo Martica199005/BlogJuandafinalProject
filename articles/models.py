@@ -10,6 +10,7 @@ class Articles(models.Model):
   subject=models.CharField(max_length=100, choices= article_type ,blank=True)
   body=models.TextField()
   date=models.DateTimeField(auto_now_add=True)
+  thumb=models.FileField(blank=True, null=True)
   author = models.ForeignKey(User, default=None,on_delete=models.DO_NOTHING)
  
  

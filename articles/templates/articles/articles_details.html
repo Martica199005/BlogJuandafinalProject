@@ -30,9 +30,13 @@
               <p>{{articles.date}}</p>
             </div>
           </div>
-        <a href="https://www.facebook.com/sharer/sharer.php?u=https://blogjuanda1.herokuapp.com/articles/{{articles.slug}}/">
-          <i class="fab fa-1x fa-facebook"></i> Compartir en Facebook
-</a>      
+          <div class="row">
+            <div class="col-12 py-1 py-md-3">
+              <a href="{{articles.thumb.url}}" download="{{articles.thumb.url}}">Download File</a>
+            </div>
+          </div>
+          <a href="https://www.facebook.com/sharer/sharer.php?u=https://blogjuanda1.herokuapp.com/articles/{{articles.slug}}/">
+          <i class="fab fa-1x fa-facebook"></i> Compartir en Facebook</a>      
   </div>
 </section>
 {% endblock %}

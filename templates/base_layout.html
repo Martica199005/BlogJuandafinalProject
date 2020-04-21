@@ -44,6 +44,14 @@
                   <li class="nav-item"><a class="nav-link" href="{% url 'articles:article_workout' %}" class="highlight" >Entrenamiento</a></li>
                   <li class="nav-item"><a class="nav-link" href="{% url 'articles:articles_nutrition' %}" class="highlight" >Nutrición</a></li>
                   <li class="nav-item"><a class="nav-link" href="{% url 'articles:articles_massages' %}" class="highlight" >Masajes</a></li>
+                  <a class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" href="#">Mis Servicios</a>
+                    <div class="dropdown-menu">
+                      <a href="{% url "articles:coaching" %}" class="dropdown-item">Coaching</a>
+                      <a href="{% url "articles:massages" %}" class="dropdown-item">Mesajes</a>
+                      <!--div class="dropdown-divider">
+                      </!--div>
+                      <a-- href="#"class="dropdown-item">Software Development</a-->
+                    </div>
                   {% if user.is_authenticated%}
                   <li class="nav-item">
                   <form class="logout link "action="{% url 'accounts:logout'%}" method="post">

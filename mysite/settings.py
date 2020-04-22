@@ -13,7 +13,6 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 
 import os
 import django_heroku
-import cloudinary
 
 
 
@@ -36,7 +35,6 @@ ALLOWED_HOSTS = ['blogjuanda1.herokuapp.com','juandavidriverablog.tk' ]
 # Application definition
 
 INSTALLED_APPS = [
-    'cloudinary',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',

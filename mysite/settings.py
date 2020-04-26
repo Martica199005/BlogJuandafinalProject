@@ -40,11 +40,13 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
+    'cloudinary_storage',
     'django.contrib.staticfiles',
     'articles',
     'accounts',
     'bootstrap4',
     'crispy_forms',
+    'cloudinary',
 ]
 
 MIDDLEWARE = [
@@ -142,7 +144,14 @@ MEDIA_ROOT=os.path.join(BASE_DIR ,'media')
 ALLOWED_HOSTS = ['*']
 X_FRAME_OPTIONS = '*'
 
-STATICSTORAGE = "Whitenoise.storage.CompressedManifestStaticFilesStorage"
+CLOUDINARY_STORAGE = {
+    'CLOUD_NAME': 'hybzktgvk',
+    'API_KEY': '521471967114378',
+    'API_SECRET': 'sd3MxTPMvUViMEfXjAzHjhU2Ups',
+}
+DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
+
+# STATICSTORAGE = "Whitenoise.storage.CompressedManifestStaticFilesStorage"
 
 django_heroku.settings(locals())
 

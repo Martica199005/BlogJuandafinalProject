@@ -145,10 +145,16 @@ MEDIA_ROOT=os.path.join(BASE_DIR ,'media')
 ALLOWED_HOSTS = ['*']
 X_FRAME_OPTIONS = '*'
 
+# CLOUDINARY_STORAGE = {
+#     'CLOUD_NAME': 'hybzktgvk',
+#     'API_KEY': '521471967114378',
+#     'API_SECRET': 'sd3MxTPMvUViMEfXjAzHjhU2Ups',
+# }
+
 CLOUDINARY_STORAGE = {
-    'CLOUD_NAME': 'hybzktgvk',
-    'API_KEY': '521471967114378',
-    'API_SECRET': 'sd3MxTPMvUViMEfXjAzHjhU2Ups',
+    'CLOUD_NAME': 'dtdmebpdr',
+    'API_KEY': '966762766199456',
+    'API_SECRET': 'jIGSM9T2ScLDrFRNA8EqH58vcqA',
 }
 DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 

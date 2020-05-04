@@ -24,9 +24,6 @@ def articles_details(request,slug):
   if current_site.domain == 'blogjuanda1.herokuapp.com':
         print("blogjuanda1.herokuapp.com")
         current_site="https://"+str(current_site)
-  elif current_site.domain == 'juandavidriverablog.tk':
-        print("juandavidriverablog.tk")
-        current_site="http://"+str(current_site)
   else:
         print(current_site.domain)
         current_site="http://"+str(current_site)

@@ -33,6 +33,9 @@ class Articles(models.Model):
 
 
 
+
+
+
 #makemigration
 #migrate
 #django ORM

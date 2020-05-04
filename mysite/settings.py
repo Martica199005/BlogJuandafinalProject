@@ -161,7 +161,7 @@ DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 # STATICSTORAGE = "Whitenoise.storage.CompressedManifestStaticFilesStorage"
 
 
-django_heroku.settings(locals())
+#django_heroku.settings(locals())
 
 
 

@@ -4,6 +4,7 @@ from django.contrib.auth.decorators import login_required
 from . import forms
 from django.shortcuts import get_list_or_404, get_object_or_404
 from django.contrib import messages
+from django.contrib.sites.shortcuts import get_current_site
 #from django.http import HttpResponse
 
 
@@ -18,7 +19,18 @@ def articles_list(request):
 def articles_details(request,slug):
   #return HttpResponse(slug)
   articles=Articles.objects.get(slug=slug)
-  return render(request,'articles/articles_details.html',{'articles':articles})
+  current_site = get_current_site(request)
+  print("current site:")
+  if current_site.domain == 'blogjuanda1.herokuapp.com':
+        print("blogjuanda1.herokuapp.com")
+        current_site="https://"+str(current_site)
+  elif current_site.domain == 'juandavidriverablog.tk':
+        print("juandavidriverablog.tk")
+        current_site="http://"+str(current_site)
+  else:
+        print(current_site.domain)
+        current_site="http://"+str(current_site)
+  return render(request,'articles/articles_details.html',{'articles':articles, 'current_site':current_site})
 
 @login_required(login_url="/accounts/login")
 def article_create(request):
@@ -65,6 +77,9 @@ def massages(request):
 
 def coaching(request):
   return render(request,'articles/coaching_services.html')
+
+
+  
   
 
 

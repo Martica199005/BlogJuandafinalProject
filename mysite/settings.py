@@ -143,8 +143,8 @@ MEDIA_URL='/media/'
 MEDIA_ROOT=os.path.join(BASE_DIR ,'media')
 
 ALLOWED_HOSTS = ['*']
-#X_FRAME_OPTIONS = '*'
-X_FRAME_OPTIONS = 'ALLOW-FROM www.facebook.com.'
+X_FRAME_OPTIONS = '*'
+#X_FRAME_OPTIONS = 'ALLOW-FROM www.facebook.com.'
 
 # CLOUDINARY_STORAGE = {
 #     'CLOUD_NAME': 'hybzktgvk',

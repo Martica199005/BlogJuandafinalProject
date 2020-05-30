@@ -143,7 +143,8 @@ MEDIA_URL='/media/'
 MEDIA_ROOT=os.path.join(BASE_DIR ,'media')
 
 ALLOWED_HOSTS = ['*']
-X_FRAME_OPTIONS = '*'
+#X_FRAME_OPTIONS = '*'
+X_FRAME_OPTIONS = 'ALLOW-FROM http://juandavidriverablog.tk/'
 
 # CLOUDINARY_STORAGE = {
 #     'CLOUD_NAME': 'hybzktgvk',
@@ -161,7 +162,7 @@ DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 # STATICSTORAGE = "Whitenoise.storage.CompressedManifestStaticFilesStorage"
 
 
-#django_heroku.settings(locals())
+django_heroku.settings(locals())
 
 
 

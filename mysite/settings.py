@@ -144,7 +144,7 @@ MEDIA_ROOT=os.path.join(BASE_DIR ,'media')
 
 ALLOWED_HOSTS = ['*']
 #X_FRAME_OPTIONS = '*'
-X_FRAME_OPTIONS = 'ALLOW-FROM http://juandavidriverablog.tk/'
+X_FRAME_OPTIONS = 'ALLOW-FROM http://facebook.com/'
 
 # CLOUDINARY_STORAGE = {
 #     'CLOUD_NAME': 'hybzktgvk',

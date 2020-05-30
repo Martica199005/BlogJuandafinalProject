@@ -5,8 +5,6 @@ from . import forms
 from django.shortcuts import get_list_or_404, get_object_or_404
 from django.contrib import messages
 from django.contrib.sites.shortcuts import get_current_site
-from django.http import HttpResponse
-from django.views.decorators.clickjacking import xframe_options_exempt
 
 
 
@@ -78,9 +76,7 @@ def massages(request):
 def coaching(request):
   return render(request,'articles/coaching_services.html')
 
-@xframe_options_exempt
-def ok_to_load_in_a_frame(request):
-    return HttpResponse("This page is safe to load in a frame on any site.")
+
 
 
   

@@ -145,9 +145,9 @@ MEDIA_ROOT=os.path.join(BASE_DIR ,'media')
 ALLOWED_HOSTS = ['*']
 X_FRAME_OPTIONS = '*'
 
-cloud_name= 'dtdmebpdr'
-cloud_api_key='966762766199456'
-cloud_api_secret='jIGSM9T2ScLDrFRNA8EqH58vcqA'
+cloud_name=os.environ.get('CLOUD_NAME')
+cloud_api_key=os.environ.get('CLOUD_API_KEY')
+cloud_api_secret=os.environ.get('CLOUD_API_SECRET')
 
 CLOUDINARY_STORAGE = {
     'CLOUD_NAME': cloud_name,

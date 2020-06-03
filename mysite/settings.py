@@ -144,22 +144,18 @@ MEDIA_ROOT=os.path.join(BASE_DIR ,'media')
 
 ALLOWED_HOSTS = ['*']
 X_FRAME_OPTIONS = '*'
-#X_FRAME_OPTIONS = 'ALLOW-FROM www.facebook.com.'
 
-# CLOUDINARY_STORAGE = {
-#     'CLOUD_NAME': 'hybzktgvk',
-#     'API_KEY': '521471967114378',
-#     'API_SECRET': 'sd3MxTPMvUViMEfXjAzHjhU2Ups',
-# }
+cloud_name= os.environ.get('CLOUD_NAME')
+cloud_api_key=os.environ.get('CLOUD_API_KEY')
+cloud_api_secret=os.environ.get('CLOUD_API_SECRET')
 
 CLOUDINARY_STORAGE = {
-    'CLOUD_NAME': 'dtdmebpdr',
-    'API_KEY': '966762766199456',
-    'API_SECRET': 'jIGSM9T2ScLDrFRNA8EqH58vcqA',
+    'CLOUD_NAME': cloud_name,
+    'API_KEY': cloud_api_key,
+    'API_SECRET': cloud_api_secret,
 }
 DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 
-# STATICSTORAGE = "Whitenoise.storage.CompressedManifestStaticFilesStorage"
 
 
 django_heroku.settings(locals())

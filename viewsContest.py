@@ -76,9 +76,16 @@ def articles_massages(request):
   return render(request,'articles/articles_massages.html', {'articles':articles})
 
 def edit_article(request,slug):
-    articles=Articles.objects.get(slug=slug)
-    articles.likes.add(request.user)
-    return redirect('articles:list')
+    article = Articles.objects.get(slug=slug) 
+    if request.method == 'POST':
+        form = forms.EditArticle(request.POST, instance=article)
+        if form.is_valid():
+          form.save()
+          return redirect('articles:list')
+    else:
+         form = forms.EditArticle(instance=article)
+    args = {'form': form}
+    return render(request, 'articles/edit_article.html', args)
 
 
 
